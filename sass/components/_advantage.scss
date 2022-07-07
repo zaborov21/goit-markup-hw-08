@@ -1,0 +1,28 @@
+.advantage-list {
+   @include card-set();
+
+    @extend %list;
+  }
+  .advantage-list__item{
+    @include card-set-item();
+  }
+  .advantage-thumb {
+    padding: 25px 100px;
+    margin-bottom: 30px;
+  
+    background-color: $bg-advantages-color;
+    border-radius: 4px;
+  }
+  .advantage-list__title {
+    margin-bottom: 10px;
+  
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: inherit;
+  }
+  
+  .advantage-list__subtitle{
+    color: $description-color;
+    line-height: 1.71;
+  }
+  

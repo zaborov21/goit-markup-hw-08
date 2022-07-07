@@ -1,0 +1,38 @@
+.section-clients__title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+.clients-list {
+  @include card-set();
+
+  @extend %list;
+}
+.clients-list__item {
+  @include card-set-item(30px, 6);
+}
+.clients-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92px;
+  width: 170px;
+
+  color: $clients-color;
+  border: 1px solid $clients-color;
+  border-radius: 4px;
+
+  transition: color $time $time-function, border-color $time $time-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+.clients-list__icon {
+  fill: currentColor;
+}

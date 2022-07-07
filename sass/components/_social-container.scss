@@ -1,0 +1,37 @@
+.social-container {
+  margin-left: 70px;
+
+  &__title {
+    margin-bottom: 20px;
+
+    color: $primary-white-color;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+}
+.social-list {
+  display: flex;
+
+  @extend %list;
+}
+.social-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color $time $time-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+.social-list__icon--color {
+  color: $primary-white-color;
+}
