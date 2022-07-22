@@ -1,11 +1,24 @@
 .site-contact {
   @extend %list;
-  display: flex;
 
   margin-left: auto;
 
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
   &__item:not(:first-child) {
-    margin-left: 50px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 50px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+
+    margin-bottom: 64px;
   }
 }
 
@@ -13,11 +26,7 @@
   display: flex;
   align-items: center;
 
-  padding-top: 32px;
-  padding-bottom: 32px;
-
   color: $description-color;
-
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -26,9 +35,32 @@
 
   transition: color $time $time-function;
 
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  @media screen and (max-width: 767px) {
+    &.email{
+      margin-bottom: 32px;
+
+      font-size: 34px;
+      line-height: 1.17;
+      color: $accent-color;
+    }
+    &.tel{
+      font-size: 28px;
+      line-height: 1.17;
+    }
+  }
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 .site-contact__icon {
@@ -37,4 +69,8 @@
   fill: currentColor;
 
   transition: fill $time $time-function;
+
+  @media screen and (max-width: 1199px) {
+    margin-right: 8px;
+  }
 }

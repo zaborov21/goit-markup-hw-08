@@ -1,5 +1,9 @@
 .section-experience {
   padding-top: 0;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 .experience__title {
   margin-bottom: 50px;
@@ -11,11 +15,11 @@
   line-height: 1.17;
 }
 .experience-list {
-  @include card-set();
-
   @extend %list;
 
-  &__item{
+  @include card-set();
+
+  &__item {
     @include card-set-item(30px, 3);
   }
 }

@@ -23,37 +23,51 @@
         <a class="page-header__logo" href="./index.html">
           <span class="logo--color">Web</span>Studio</a
         >
-        <nav class="site-header__nav">
-          <ul class="site-menu list">
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="./index.html">Студия</a>
+        <button class="btn-menu" type="button" data-menu-button>
+          <svg width="40" height="40">
+            <use class="icon-menu" href="./images/icons/icons.svg#icon-menu"></use>
+            <use class="icon-menu-cross" href="./images/icons/icons.svg#icon-menu-cross"></use>
+          </svg>
+        </button>
+        <div class="menu-container" data-menu>
+          <nav class="site-header__nav">
+            <ul class="site-menu list">
+              <li class="site-menu__item">
+                <a class="site-menu__link" href="./index.html">Студия</a>
+              </li>
+              <li class="site-menu__item">
+                <a class="site-menu__link site-menu__link--active" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="site-menu__item">
+                <a class="site-menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="site-contact list">
+            <li class="site-contact__item">
+              <a class="site-contact__link email" href="mailto:info@devstudio.com">
+                <svg class="site-contact__icon" width="16" height="12">
+                  <use href="./images/icons/icons.svg#icon-email"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link site-menu__link--active" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="site-menu__item">
-              <a class="site-menu__link" href="#">Контакты</a>
+            <li class="site-contact__item">
+              <a class="site-contact__link tel" href="tel:+380961111111">
+                <svg class="site-contact__icon" width="10" height="16">
+                  <use href="./images/icons/icons.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="site-contact list">
-          <li class="site-contact__item">
-            <a class="site-contact__link" href="mailto:info@devstudio.com">
-              <svg class="site-contact__icon" width="16" height="12">
-                <use href="./images/icons/icons.svg#icon-email"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="site-contact__item">
-            <a class="site-contact__link" href="tel:+380961111111">
-              <svg class="site-contact__icon" width="10" height="16">
-                <use href="./images/icons/icons.svg#icon-phone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="header-social">
+            <li class="header-social__item"><a class="header-social__link" href="#"><span class="header-social__link--line">Instagram</span></a></li>
+            <li class="header-social__item"><a class="header-social__link" href="#"><span class="header-social__link--line">Twitter</span></a></li>
+            <li class="header-social__item"><a class="header-social__link" href="#"><span class="header-social__link--line">Facebook</span></a></li>
+            <li class="header-social__item"><a class="header-social__link" href="#">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <!-- Унікальний контент -->
@@ -82,13 +96,31 @@
             <li class="cards-list__item card-set-item">
               <a class="cards-list__link" href="#" aria-label="Веб-сайт">
                 <div class="card-thumb">
-                  <img
-                    class="img"
-                    src="./images/portfolio/img-port-1.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio/portfolio-1-450.jpg 1x,
+                        ./images/mobile/portfolio/portfolio-1-450@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio/portfolio-1-450.jpg 1x,
+                        ./images/tablet/portfolio/portfolio-1-450@2x.jpg 2x"
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/desktop/portfolio/portfolio-1-370.jpg 1x,
+                        ./images/desktop/portfolio/portfolio-1-370@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/desktop/portfolio-1-370.jpg.jpg"
+                      alt="Михаил Ермаков"
+                      
+                    />
+                  </picture>
                   <div class="card-thumb__content">
                     <p class="card-thumb__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -108,13 +140,31 @@
             <li class="cards-list__item card-set-item">
               <a class="cards-list__link" href="#" aria-label="Дизайн">
                 <div class="card-thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio/portfolio-2-450.jpg 1x,
+                      ./images/mobile/portfolio/portfolio-2-450@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio/portfolio-2-450.jpg 1x,
+                      ./images/tablet/portfolio/portfolio-2-450@2x.jpg 2x"
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio/portfolio-2-370.jpg 1x,
+                      ./images/desktop/portfolio/portfolio-2-370@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
                   <img
-                  class="img"
-                  src="./images/portfolio/img-port-2.jpg"
-                  alt="Постер New Orlean vs Golden Star"
-                  width="370"
-                  height="294"
-                />
+                    src="./images/desktop/portfolio-2-370.jpg.jpg"
+                    alt="Михаил Ермаков"
+                    
+                  />
+                </picture>
                 <div class="card-thumb__content">
                   <p class="card-thumb__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -135,13 +185,31 @@
             <li class="cards-list__item card-set-item">
               <a class="cards-list__link" href="#" aria-label="Приложение">
                 <div class="card-thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio/portfolio-3-450.jpg 1x,
+                      ./images/mobile/portfolio/portfolio-3-450@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio/portfolio-3-450.jpg 1x,
+                      ./images/tablet/portfolio/portfolio-3-450@2x.jpg 2x"
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio/portfolio-3-370.jpg 1x,
+                      ./images/desktop/portfolio/portfolio-3-370@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
                   <img
-                  class="img"
-                  src="./images/portfolio/img-port-3.jpg"
-                  alt="Ресторан Seafood"
-                  width="370"
-                  height="294"
-                />
+                    src="./images/desktop/portfolio-3-370.jpg.jpg"
+                    alt="Михаил Ермаков"
+                    
+                  />
+                </picture>
                 <div class="card-thumb__content">
                   <p class="card-thumb__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -162,13 +230,31 @@
             <li class="cards-list__item card-set-item">
               <a class="cards-list__link" href="#" aria-label="Маркетинг">
                 <div class="card-thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio/portfolio-4-450.jpg 1x,
+                      ./images/mobile/portfolio/portfolio-4-450@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio/portfolio-4-450.jpg 1x,
+                      ./images/tablet/portfolio/portfolio-4-450@2x.jpg 2x"
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio/portfolio-4-370.jpg 1x,
+                      ./images/desktop/portfolio/portfolio-4-370@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
                   <img
-                  class="img"
-                  src="./images/portfolio/img-port-4.jpg"
-                  alt="Проект Prime"
-                  width="370"
-                  height="294"
-                />
+                    src="./images/desktop/portfolio-4-370.jpg.jpg"
+                    alt="Михаил Ермаков"
+                    
+                  />
+                </picture>
                 <div class="card-thumb__content">
                   <p class="card-thumb__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -189,13 +275,31 @@
             <li class="cards-list__item card-set-item">
               <a class="cards-list__link" href="#" aria-label="Приложение">
                 <div class="card-thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio/portfolio-5-450.jpg 1x,
+                      ./images/mobile/portfolio/portfolio-5-450@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio/portfolio-5-450.jpg 1x,
+                      ./images/tablet/portfolio/portfolio-5-450@2x.jpg 2x"
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio/portfolio-5-370.jpg 1x,
+                      ./images/desktop/portfolio/portfolio-5-370@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
                   <img
-                  class="img"
-                  src="./images/portfolio/img-port-5.jpg"
-                  alt="Проект Boxes"
-                  width="370"
-                  height="294"
-                />
+                    src="./images/desktop/portfolio-5-370.jpg.jpg"
+                    alt="Михаил Ермаков"
+                    
+                  />
+                </picture>
                 <div class="card-thumb__content">
                   <p class="card-thumb__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -216,13 +320,31 @@
             <li class="cards-list__item card-set-item">
               <a class="cards-list__link" href="#" aria-label="Веб-сайт">
                 <div class="card-thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio/portfolio-6-450.jpg 1x,
+                      ./images/mobile/portfolio/portfolio-6-450@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio/portfolio-6-450.jpg 1x,
+                      ./images/tablet/portfolio/portfolio-6-450@2x.jpg 2x"
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio/portfolio-6-370.jpg 1x,
+                      ./images/desktop/portfolio/portfolio-6-370@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
                   <img
-                  class="img"
-                  src="./images/portfolio/img-port-6.jpg"
-                  alt="Inspiration has no Borders"
-                  width="370"
-                  height="294"
-                />
+                    src="./images/desktop/portfolio-6-370.jpg.jpg"
+                    alt="Михаил Ермаков"
+                    
+                  />
+                </picture>
                 <div class="card-thumb__content">
                   <p class="card-thumb__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -243,13 +365,31 @@
             <li class="cards-list__item card-set-item">
               <a class="cards-list__link" href="#" aria-label="Дизайн">
                 <div class="card-thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio/portfolio-7-450.jpg 1x,
+                      ./images/mobile/portfolio/portfolio-7-450@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio/portfolio-7-450.jpg 1x,
+                      ./images/tablet/portfolio/portfolio-7-450@2x.jpg 2x"
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio/portfolio-7-370.jpg 1x,
+                      ./images/desktop/portfolio/portfolio-7-370@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
                   <img
-                  class="img"
-                  src="./images/portfolio/img-port-7.jpg"
-                  alt="Издание Limited Edition"
-                  width="370"
-                  height="294"
-                />
+                    src="./images/desktop/portfolio-7-370.jpg.jpg"
+                    alt="Михаил Ермаков"
+                    
+                  />
+                </picture>
                 <div class="card-thumb__content">
                   <p class="card-thumb__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -270,13 +410,31 @@
             <li class="portfolio-list-item card-set-item   cards-list__item">
               <a class="portfolio-card-link   cards-list__link" href="#" aria-label="Маркетинг">
                 <div class="card-thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio/portfolio-8-450.jpg 1x,
+                      ./images/mobile/portfolio/portfolio-8-450@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio/portfolio-8-450.jpg 1x,
+                      ./images/tablet/portfolio/portfolio-8-450@2x.jpg 2x"
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio/portfolio-8-370.jpg 1x,
+                      ./images/desktop/portfolio/portfolio-8-370@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
                   <img
-                  class="img"
-                  src="./images/portfolio/img-port-8.jpg"
-                  alt="Проект LAB"
-                  width="370"
-                  height="294"
-                />
+                    src="./images/desktop/portfolio-8-370.jpg.jpg"
+                    alt="Михаил Ермаков"
+                    
+                  />
+                </picture>
                 <div class="card-thumb-descr   card-thumb__content">
                   <p class="card-descr   card-thumb__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -297,13 +455,31 @@
             <li class="cards-list__item card-set-item">
               <a class="cards-list__link" href="#" aria-label="Приложение">
                 <div class="card-thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/portfolio/portfolio-9-450.jpg 1x,
+                      ./images/mobile/portfolio/portfolio-9-450@2x.jpg 2x"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/portfolio/portfolio-9-450.jpg 1x,
+                      ./images/tablet/portfolio/portfolio-9-450@2x.jpg 2x"
+                    media="(max-width: 1199px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop/portfolio/portfolio-9-370.jpg 1x,
+                      ./images/desktop/portfolio/portfolio-9-370@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
                   <img
-                  class="img"
-                  src="./images/portfolio/img-port-9.jpg"
-                  alt="Growing Business"
-                  width="370"
-                  height="294"
-                />
+                    src="./images/desktop/portfolio-9-370.jpg.jpg"
+                    alt="Михаил Ермаков"
+                    
+                  />
+                </picture>
                 <div class="card-thumb__content">
                   <p class="card-thumb__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
@@ -327,109 +503,111 @@
     <!-- Футер -->
     <footer class="page-footer">
       <div class="page-footer__container container">
-        <div class="wrapper-address">
-          <a class="footer_logo" href="/"
-            ><span class="logo--color">Web</span>Studio</a
-          >
-          <address>
-            <ul class="address-list list">
-              <li class="address-list__item">
+        <div class="page-footer__wrapper">
+          <div class="wrapper-address">
+            <a class="footer_logo" href="/"
+              ><span class="logo--color">Web</span>Studio</a
+            >
+            <address>
+              <ul class="address-list list">
+                <li class="address-list__item">
+                  <a
+                    class="address-list__link address-list__link--color"
+                    href="https://goo.gl/maps/ramN2arNtJo2N1Zz9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="address-list__item">
+                  <a class="address-list__link" href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="address-list__item">
+                  <a class="address-list__link" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social-container">
+            <p class="social-container__title">Присоединяйтесь</p>
+            <ul class="social-list footer-social-list--gap list">
+              <li class="social-list__item">
                 <a
-                  class="address-list__link address-list__link--color"
-                  href="https://goo.gl/maps/ramN2arNtJo2N1Zz9"
+                  class="social-list__link"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
-                  >г. Киев, пр-т Леси Украинки, 26</a
+                  aria-label="instagram"
                 >
+                  <svg
+                    class="social-list__icon social-list__icon--color"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/icons/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-list__item">
-                <a class="address-list__link" href="mailto:info@example.com"
-                  >info@example.com</a
+  
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="twitter"
                 >
+                  <svg
+                    class="social-list__icon social-list__icon--color"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/icons/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address-list__item">
-                <a class="address-list__link" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
+  
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="facebook"
                 >
+                  <svg
+                    class="social-list__icon social-list__icon--color"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/icons/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+  
+              <li class="social-list__item">
+                <a
+                  class="social-list__link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="linkedin"
+                >
+                  <svg
+                    class="social-list__icon social-list__icon--color"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/icons/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="social-container">
-          <p class="social-container__title">Присоединяйтесь</p>
-          <ul class="social-list list">
-            <li class="social-list__item">
-              <a
-                class="social-list__link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="instagram"
-              >
-                <svg
-                  class="social-list__icon social-list__icon--color"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/icons/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-list__item">
-              <a
-                class="social-list__link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="twitter"
-              >
-                <svg
-                  class="social-list__icon social-list__icon--color"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/icons/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-list__item">
-              <a
-                class="social-list__link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="facebook"
-              >
-                <svg
-                  class="social-list__icon social-list__icon--color"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/icons/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-list__item">
-              <a
-                class="social-list__link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="linkedin"
-              >
-                <svg
-                  class="social-list__icon social-list__icon--color"
-                  width="20"
-                  height="20"
-                >
-                  <use href="./images/icons/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="subscribe-container">
           <p class="subscribe-container__title">Подпишитесь на рассылку</p>
@@ -453,5 +631,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

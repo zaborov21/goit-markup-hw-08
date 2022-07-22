@@ -1,19 +1,36 @@
 .social-container {
-  margin-left: 70px;
-
+  @media screen and (min-width: 1200px){
+    margin-left: 70px;
+  }
   &__title {
     margin-bottom: 20px;
 
     color: $primary-white-color;
+    text-align: center;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
+
+    @media screen and (max-width: 1199px){
+      margin-top: 60px;
+    }
   }
 }
+.social-list{
+    @media screen and (max-width: 1199px){
+      margin-top: 24px;
+    }
+  }
 .social-list {
-  display: flex;
-
   @extend %list;
+  &.footer-social-list--gap{
+    @media screen and (max-width: 1199px){
+      margin-bottom: 60px;
+    }
+  }
+  @media screen and (min-width: 1200px){
+    display: flex;
+  }
 }
 .social-list__link {
   display: flex;
