@@ -17,8 +17,6 @@
 
   @media screen and (max-width: 767px) {
     display: none;
-
-    margin-bottom: 64px;
   }
 }
 
@@ -38,19 +36,6 @@
   @media screen and (min-width: 768px) and (max-width: 1199px){
     font-size: 12px;
     line-height: 1.17;
-  }
-  @media screen and (max-width: 767px) {
-    &.email{
-      margin-bottom: 32px;
-
-      font-size: 34px;
-      line-height: 1.17;
-      color: $accent-color;
-    }
-    &.tel{
-      font-size: 28px;
-      line-height: 1.17;
-    }
   }
   &:hover,
   &:focus {

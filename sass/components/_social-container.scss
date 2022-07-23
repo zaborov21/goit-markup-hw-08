@@ -5,13 +5,17 @@
   &__title {
     margin-bottom: 20px;
 
-    color: $primary-white-color;
+    @media screen and (min-width: 1200px){
+      text-align: left;
+    }
+
     text-align: center;
+    color: $primary-white-color;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
 
-    @media screen and (max-width: 1199px){
+    @media screen and (max-width: 767px){
       margin-top: 60px;
     }
   }

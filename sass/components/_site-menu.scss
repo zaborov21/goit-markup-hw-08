@@ -3,8 +3,6 @@
 
   @media screen and (max-width: 767px) {
     display: none;
-
-    margin-bottom: 302px;
   }
 
   @media screen and (min-width: 768px) {
@@ -18,12 +16,6 @@
     &:not(:first-child) {
       margin-left: 50px;
     }
-  }
-}
-
-@media screen and (max-width: 767px){
-  .site-menu__item:not(:last-child){
-    margin-bottom: 35px;
   }
 }
 .site-menu__link {
@@ -43,6 +35,10 @@
     
     font-size: 40px;
     line-height: 1.17;
+
+    &--active {
+      color: $accent-color;
+    }
   }
   @media screen and (min-width: 768px) {
     padding-top: 32px;

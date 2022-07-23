@@ -106,7 +106,8 @@
   background-color: $primary-white-color;
   border-radius: 50%;
 
-  transition: color $time $time-function;
+  transition: color $time $time-function,
+      background-color $time $time-function;
 
   &:hover,
   &:focus {
